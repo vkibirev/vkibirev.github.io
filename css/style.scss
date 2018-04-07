@@ -1,3 +1,6 @@
+$main-font: "Roboto Slab";
+$secondary-font: "Montserrat";
+
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -6,9 +9,7 @@ body,
 html {
     margin: 0;
     padding: 0;
-    font-family: 'Open Sans', 'Arial', sans-serif;
-    font-size: 29px;
-    font-weight: 300;
-    line-height: 42px;
+    font-family: $main-font, 'Arial', sans-serif;    
     background-color: rgb(255, 255, 255);
 }
+
