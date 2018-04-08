@@ -1,5 +1,8 @@
-$main-font: "Roboto Slab";
-$secondary-font: "Montserrat";
+$mainFont: "Roboto Slab";
+$secondaryFont: "Montserrat";
+$mainFontColor: rgb(119, 119, 119);
+$headerBackgroundImage: "../img/header_background_image.png";
+
 
 *, *::before, *::after {
     box-sizing: border-box;
@@ -9,7 +12,75 @@ body,
 html {
     margin: 0;
     padding: 0;
-    font-family: $main-font, 'Arial', sans-serif;    
+    font-family: $mainFont, 'Arial', sans-serif;
+    font-size: 14px; 
+    color: $mainFontColor;   
     background-color: rgb(255, 255, 255);
 }
 
+header {
+    max-height: 100%;      
+    background-image: url($headerBackgroundImage);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+}
+
+.wrapper {
+    width: 940px;
+    margin: 0 auto;
+}
+
+ul.header_menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 35px 0;
+    overflow: hidden;
+    li{
+        float: right;
+        padding-left: 30px;
+        a {
+            display: block;
+            padding: 0 5px;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;            
+            font-family: $secondaryFont, "Arial", sans-serif;
+            font-size: 14px;
+            line-height: 41px;            
+        }
+
+        a:hover:not(.logo) {
+            background-color: rgba(255, 255, 255, 0.4);            
+        }
+
+        a:active:not(.logo) {
+            background-color: rgba(255, 255, 255, 0.8);
+            color: black;
+        }
+    }
+    li.left {
+        float: left;
+        padding-left: 0;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .wrapper {
+        width: 98%;
+    }
+}
+
+@media screen and (max-width: 620px) {
+
+    ul.header_menu {
+        li{
+            float: none;
+            padding-left: 0;
+        }
+        li.left {
+            float: none;
+        }
+    }
+}
