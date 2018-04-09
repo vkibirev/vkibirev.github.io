@@ -18,7 +18,7 @@ html {
     background-color: rgb(255, 255, 255);
 }
 
-header {
+header.header_background {
     max-height: 100%;      
     background-image: url($headerBackgroundImage);
     background-repeat: no-repeat;
@@ -34,7 +34,7 @@ header {
 ul.header_menu {
     list-style-type: none;
     margin: 0;
-    padding: 35px 0;
+    padding: 35px 0px 0px 0px;
     overflow: hidden;
     li{
         float: right;
@@ -66,6 +66,46 @@ ul.header_menu {
     }
 }
 
+.greeting_block {
+    text-align: center;
+    color: white;
+    margin: 200px 0px 60px 0px;
+    p {
+        padding: 0;
+        margin: 0;
+        font-style: italic;
+        font-size: 40px;
+        font-weight: 200;
+    }
+
+    h1 {
+        padding-top: 50px;
+        margin: 0;
+        text-transform: uppercase;
+        font-family: $secondaryFont, "Arial", sans-serif;
+        font-size: 75px;
+        font-weight: 700;
+    }
+}
+
+.button_wrapper {
+    text-align: center;
+    margin-bottom: 60px;
+    .button {    
+        padding: 25px 48px;
+        text-decoration: none;
+        font-family: $secondaryFont, "Arial", sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: white;
+        background-color: rgb(254, 209, 54);
+    }
+}
+
+
+
+
 @media screen and (max-width: 960px) {
     .wrapper {
         width: 98%;
@@ -80,7 +120,10 @@ ul.header_menu {
             padding-left: 0;
         }
         li.left {
-            float: none;
+            float: left;
+        }
+        .hidden {
+            display: none;
         }
     }
 }
