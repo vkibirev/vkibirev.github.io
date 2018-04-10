@@ -151,7 +151,7 @@ ul.header_menu {
     }
 }
 
-.services_block {
+.information_block {
     text-align: center;
     padding-top: 100px;
     padding-bottom: 100px;
@@ -168,6 +168,20 @@ ul.services_list {
     display: flex;
     justify-content: space-between;
 
+    b {
+        display: block;
+        font-family: $secondaryFont, "Arial", sans-serif;
+        font-size: 18px;
+        color: black;
+        line-height: 75px;
+    }
+
+    p {
+        padding: 0px 10px;
+        font-size: 14px;
+        font-style: normal;
+    }
+
     li.services_list_item {
         padding-top: 190px;
         text-align: center;
@@ -179,20 +193,6 @@ ul.services_list {
             border: 4px solid $buttonsColor;
             border-radius: 30px;
             padding: 10px;
-        }
-
-        b {
-            display: block;
-            font-family: $secondaryFont, "Arial", sans-serif;
-            font-size: 18px;
-            color: black;
-            line-height: 75px;
-        }
-
-        p {
-            padding: 0px 10px;
-            font-size: 14px;
-            font-style: normal;
         }
     }
 
@@ -206,6 +206,31 @@ ul.services_list {
 
     li.services_list_item:not(:first-child) {
         padding-left: 20px;
+    }
+}
+
+.bg_gray {
+    background-color: rgb(247, 247, 247);
+}
+
+ul.portfolio_list {
+    @extend .services_list;
+    border: none;    
+    flex-wrap: wrap;
+
+    b {
+        line-height: 0;        
+        padding-top: 30px;
+        padding-bottom: 15px;
+    }
+
+    p {
+        padding-bottom: 30px;
+    }
+
+    li.portfolio_list_item {
+        margin-top: 50px;
+        background-color: white;
     }
 }
 
@@ -231,7 +256,7 @@ ul.services_list {
     }
 }
 
-@media screen and (max-width: 810px) {    
+@media screen and (max-width: 892px) {    
     .greeting_block {
         padding-top: 120px;
         p {            
@@ -245,9 +270,32 @@ ul.services_list {
         }
     }
 
-    .services_block {
+    .information_block {
+
+        padding: 0;
+
         .services_list {
-            flex-wrap: wrap
+            flex-direction: column;
+        }
+    }
+
+    .bg_gray {
+        background-color: white;
+    }
+
+    ul.services_list {
+
+        li.services_list_item {
+            padding-top: 145px;
+            padding-left: 0;
+
+            b {
+                line-height: 20px;
+            }
+        }
+
+        li.services_list_item:not(:first-child) {
+            padding-left: 0px;
         }
     }
 }
@@ -279,28 +327,6 @@ ul.services_list {
         }
         
     }
-
-    .services_block {
-        padding: 0;        
-    }
-
-    ul.services_list {
-
-        li.services_list_item {
-            padding-top: 145px;
-            padding-left: 0;
-
-            b {
-                line-height: 20px;
-            }
-        }
-
-        li.services_list_item:not(:first-child) {
-            padding-left: 0px;
-        }
-    }
-
-
 }
 
 @media screen and (max-width: 620px) {

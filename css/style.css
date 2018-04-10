@@ -144,40 +144,26 @@ ul.header_menu li a:active {
   color: #cccccc;
 }
 
-.services_block {
+.information_block {
   text-align: center;
   padding-top: 100px;
   padding-bottom: 100px;
 }
 
-.services_block p {
+.information_block p {
   font-style: italic;
   color: #777777;
   font-size: 16px;
 }
 
-ul.services_list {
+ul.services_list, ul.portfolio_list {
   padding: 0;
   list-style: none;
   display: flex;
   justify-content: space-between;
 }
 
-ul.services_list li.services_list_item {
-  padding-top: 190px;
-  text-align: center;
-  background-image: url(../img/box.png), url(../img/circle.png);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-ul.services_list li.services_list_item img {
-  border: 4px solid #fed136;
-  border-radius: 30px;
-  padding: 10px;
-}
-
-ul.services_list li.services_list_item b {
+ul.services_list b, ul.portfolio_list b {
   display: block;
   font-family: "Montserrat", "Arial", sans-serif;
   font-size: 18px;
@@ -185,22 +171,60 @@ ul.services_list li.services_list_item b {
   line-height: 75px;
 }
 
-ul.services_list li.services_list_item p {
+ul.services_list p, ul.portfolio_list p {
   padding: 0px 10px;
   font-size: 14px;
   font-style: normal;
 }
 
-ul.services_list li.services_list_item:nth-child(2) {
+ul.services_list li.services_list_item, ul.portfolio_list li.services_list_item {
+  padding-top: 190px;
+  text-align: center;
+  background-image: url(../img/box.png), url(../img/circle.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+ul.services_list li.services_list_item img, ul.portfolio_list li.services_list_item img {
+  border: 4px solid #fed136;
+  border-radius: 30px;
+  padding: 10px;
+}
+
+ul.services_list li.services_list_item:nth-child(2), ul.portfolio_list li.services_list_item:nth-child(2) {
   background-image: url(../img/laptop.png), url(../img/circle.png);
 }
 
-ul.services_list li.services_list_item:nth-child(3) {
+ul.services_list li.services_list_item:nth-child(3), ul.portfolio_list li.services_list_item:nth-child(3) {
   background-image: url(../img/locked.png), url(../img/circle.png);
 }
 
-ul.services_list li.services_list_item:not(:first-child) {
+ul.services_list li.services_list_item:not(:first-child), ul.portfolio_list li.services_list_item:not(:first-child) {
   padding-left: 20px;
+}
+
+.bg_gray {
+  background-color: #f7f7f7;
+}
+
+ul.portfolio_list {
+  border: none;
+  flex-wrap: wrap;
+}
+
+ul.portfolio_list b {
+  line-height: 0;
+  padding-top: 30px;
+  padding-bottom: 15px;
+}
+
+ul.portfolio_list p {
+  padding-bottom: 30px;
+}
+
+ul.portfolio_list li.portfolio_list_item {
+  margin-top: 50px;
+  background-color: white;
 }
 
 @media screen and (max-width: 1014px) {
@@ -221,7 +245,7 @@ ul.services_list li.services_list_item:not(:first-child) {
   }
 }
 
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 892px) {
   .greeting_block {
     padding-top: 120px;
   }
@@ -233,8 +257,24 @@ ul.services_list li.services_list_item:not(:first-child) {
     font-size: 55px;
     font-weight: 700;
   }
-  .services_block .services_list {
-    flex-wrap: wrap;
+  .information_block {
+    padding: 0;
+  }
+  .information_block .services_list, .information_block ul.portfolio_list {
+    flex-direction: column;
+  }
+  .bg_gray {
+    background-color: white;
+  }
+  ul.services_list li.services_list_item, ul.portfolio_list li.services_list_item {
+    padding-top: 145px;
+    padding-left: 0;
+  }
+  ul.services_list li.services_list_item b, ul.portfolio_list li.services_list_item b {
+    line-height: 20px;
+  }
+  ul.services_list li.services_list_item:not(:first-child), ul.portfolio_list li.services_list_item:not(:first-child) {
+    padding-left: 0px;
   }
 }
 
@@ -256,19 +296,6 @@ ul.services_list li.services_list_item:not(:first-child) {
   }
   ul.header_menu li {
     padding-left: 15px;
-  }
-  .services_block {
-    padding: 0;
-  }
-  ul.services_list li.services_list_item {
-    padding-top: 145px;
-    padding-left: 0;
-  }
-  ul.services_list li.services_list_item b {
-    line-height: 20px;
-  }
-  ul.services_list li.services_list_item:not(:first-child) {
-    padding-left: 0px;
   }
 }
 
