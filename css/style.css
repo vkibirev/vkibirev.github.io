@@ -6,14 +6,14 @@ body,
 html {
   margin: 0;
   padding: 0;
-  font-family: "Roboto Slab", "Arial", sans-serif;
+  font-family: "Roboto Slab", "Arial", serif;
   font-size: 14px;
   color: #777777;
   background-color: white;
 }
 
 header.header_background {
-  min-height: 700px;
+  min-height: 100%;
   background-image: url("../img/header_background_image.png");
   background-repeat: no-repeat;
   background-position: top;
@@ -25,12 +25,26 @@ header.header_background {
   margin: 0 auto;
 }
 
-.menu_font_style, .hidden_big, ul.header_menu li a {
-  color: white;
+h1, h3, .menu_font_style, .small_screen_menu_button, ul.header_menu li a, p {
+  margin: 0;
+  padding: 0;
+}
+
+h3, .menu_font_style, .small_screen_menu_button, ul.header_menu li a {
   font-family: "Montserrat", "Arial", sans-serif;
-  font-size: 14px;
   text-transform: uppercase;
+  color: black;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 75px;
+}
+
+.menu_font_style, .small_screen_menu_button, ul.header_menu li a {
+  color: white;
+  font-size: 14px;
   text-decoration: none;
+  line-height: 20px;
+  font-weight: 400;
 }
 
 .logo {
@@ -39,18 +53,18 @@ header.header_background {
   padding: 35px 0px 0px 0px;
 }
 
-.hidden_big {
+.small_screen_menu_button {
   display: none;
   float: right;
   padding: 35px 0px 0px 0px;
   text-align: right;
 }
 
-.hidden_big:hover {
+.small_screen_menu_button:hover {
   border-bottom: 1px solid white;
 }
 
-.hidden_big:active {
+.small_screen_menu_button:active {
   border-bottom: 1px solid black;
   color: black;
 }
@@ -92,8 +106,6 @@ ul.header_menu li a:active {
 }
 
 .greeting_block p {
-  padding: 0;
-  margin: 0;
   font-style: italic;
   font-size: 40px;
   font-weight: 200;
@@ -101,7 +113,6 @@ ul.header_menu li a:active {
 
 .greeting_block h1 {
   padding-top: 50px;
-  margin: 0;
   text-transform: uppercase;
   font-family: "Montserrat", "Arial", sans-serif;
   font-size: 75px;
@@ -131,6 +142,65 @@ ul.header_menu li a:active {
 .button_wrapper .button:active {
   background-color: #cd9f01;
   color: #cccccc;
+}
+
+.services_block {
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.services_block p {
+  font-style: italic;
+  color: #777777;
+  font-size: 16px;
+}
+
+ul.services_list {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+ul.services_list li.services_list_item {
+  padding-top: 190px;
+  text-align: center;
+  background-image: url(../img/box.png), url(../img/circle.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+ul.services_list li.services_list_item img {
+  border: 4px solid #fed136;
+  border-radius: 30px;
+  padding: 10px;
+}
+
+ul.services_list li.services_list_item b {
+  display: block;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 18px;
+  color: black;
+  line-height: 75px;
+}
+
+ul.services_list li.services_list_item p {
+  padding: 0px 10px;
+  font-size: 14px;
+  font-style: normal;
+}
+
+ul.services_list li.services_list_item:nth-child(2) {
+  background-image: url(../img/laptop.png), url(../img/circle.png);
+}
+
+ul.services_list li.services_list_item:nth-child(3) {
+  background-image: url(../img/locked.png), url(../img/circle.png);
+}
+
+ul.services_list li.services_list_item:not(:first-child) {
+  padding-left: 20px;
 }
 
 @media screen and (max-width: 1014px) {
@@ -163,8 +233,8 @@ ul.header_menu li a:active {
     font-size: 55px;
     font-weight: 700;
   }
-  .button_wrapper {
-    padding-bottom: 0;
+  .services_block .services_list {
+    flex-wrap: wrap;
   }
 }
 
@@ -187,6 +257,19 @@ ul.header_menu li a:active {
   ul.header_menu li {
     padding-left: 15px;
   }
+  .services_block {
+    padding: 0;
+  }
+  ul.services_list li.services_list_item {
+    padding-top: 145px;
+    padding-left: 0;
+  }
+  ul.services_list li.services_list_item b {
+    line-height: 20px;
+  }
+  ul.services_list li.services_list_item:not(:first-child) {
+    padding-left: 0px;
+  }
 }
 
 @media screen and (max-width: 620px) {
@@ -196,7 +279,7 @@ ul.header_menu li a:active {
   .logo {
     width: 50%;
   }
-  .hidden_big {
+  .small_screen_menu_button {
     display: block;
     position: relative;
   }
@@ -233,6 +316,9 @@ ul.header_menu li a:active {
     font-size: 35px;
     font-weight: 700;
   }
+  .button_wrapper {
+    padding-bottom: 20px;
+  }
 }
 
 @media screen and (max-width: 470px) {
@@ -257,13 +343,13 @@ ul.header_menu li a:active {
   .logo {
     padding: 0;
   }
-  .hidden_big {
+  .small_screen_menu_button {
     padding: 0;
   }
   .greeting_block {
     padding-top: 41px;
   }
-  .menu_font_style, .hidden_big, ul.header_menu li a {
+  .menu_font_style, .small_screen_menu_button, ul.header_menu li a {
     font-size: 12px;
   }
   ul.header_menu {

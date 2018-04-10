@@ -13,14 +13,14 @@ body,
 html {
     margin: 0;
     padding: 0;
-    font-family: $mainFont, 'Arial', sans-serif;
+    font-family: $mainFont, 'Arial', serif;
     font-size: 14px; 
     color: $mainFontColor;   
     background-color: rgb(255, 255, 255);
 }
 
 header.header_background {
-    min-height: 700px;      
+    min-height: 100%;      
     background-image: url($headerBackgroundImage);
     background-repeat: no-repeat;
     background-position: top;
@@ -32,12 +32,27 @@ header.header_background {
     margin: 0 auto;
 }
 
-.menu_font_style {
-    color: rgb(255, 255, 255);
+h1, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+h3 {
     font-family: $secondaryFont, "Arial", sans-serif;
-    font-size: 14px;
     text-transform: uppercase;
+    color: black;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 75px;
+}
+
+.menu_font_style {
+    @extend h3;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
     text-decoration: none;
+    line-height: 20px;
+    font-weight: 400;
 }
 
 .logo {
@@ -46,7 +61,7 @@ header.header_background {
     padding: 35px 0px 0px 0px;
 }
 
-.hidden_big {
+.small_screen_menu_button {
     @extend .menu_font_style;
     display: none;
     float: right;
@@ -98,8 +113,6 @@ ul.header_menu {
     padding-top: 200px;
     padding-bottom: 60px;
     p {
-        padding: 0;
-        margin: 0;
         font-style: italic;
         font-size: 40px;
         font-weight: 200;
@@ -107,7 +120,6 @@ ul.header_menu {
 
     h1 {
         padding-top: 50px;
-        margin: 0;
         text-transform: uppercase;
         font-family: $secondaryFont, "Arial", sans-serif;
         font-size: 75px;
@@ -136,6 +148,64 @@ ul.header_menu {
             background-color: darken($buttonsColor, 20%);
             color: darken(white, 20%);
         }
+    }
+}
+
+.services_block {
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    p {        
+        font-style: italic;
+        color: $mainFontColor;
+        font-size: 16px;
+    }    
+}
+
+ul.services_list {
+    padding: 0;
+    list-style: none;    
+    display: flex;
+    justify-content: space-between;
+
+    li.services_list_item {
+        padding-top: 190px;
+        text-align: center;
+        background-image: url(../img/box.png), url(../img/circle.png);
+        background-repeat: no-repeat;
+        background-position: center;
+
+        img {
+            border: 4px solid $buttonsColor;
+            border-radius: 30px;
+            padding: 10px;
+        }
+
+        b {
+            display: block;
+            font-family: $secondaryFont, "Arial", sans-serif;
+            font-size: 18px;
+            color: black;
+            line-height: 75px;
+        }
+
+        p {
+            padding: 0px 10px;
+            font-size: 14px;
+            font-style: normal;
+        }
+    }
+
+    li.services_list_item:nth-child(2) {
+        background-image: url(../img/laptop.png), url(../img/circle.png);
+    }
+
+    li.services_list_item:nth-child(3) {
+        background-image: url(../img/locked.png), url(../img/circle.png);
+    }
+
+    li.services_list_item:not(:first-child) {
+        padding-left: 20px;
     }
 }
 
@@ -175,8 +245,10 @@ ul.header_menu {
         }
     }
 
-    .button_wrapper {        
-        padding-bottom: 0;
+    .services_block {
+        .services_list {
+            flex-wrap: wrap
+        }
     }
 }
 
@@ -207,6 +279,28 @@ ul.header_menu {
         }
         
     }
+
+    .services_block {
+        padding: 0;        
+    }
+
+    ul.services_list {
+
+        li.services_list_item {
+            padding-top: 145px;
+            padding-left: 0;
+
+            b {
+                line-height: 20px;
+            }
+        }
+
+        li.services_list_item:not(:first-child) {
+            padding-left: 0px;
+        }
+    }
+
+
 }
 
 @media screen and (max-width: 620px) {
@@ -219,7 +313,7 @@ ul.header_menu {
         width: 50%;
     }
 
-    .hidden_big {
+    .small_screen_menu_button {
         display: block;
         position: relative;
     }
@@ -261,6 +355,10 @@ ul.header_menu {
             font-weight: 700;
         }
     }
+
+    .button_wrapper {        
+        padding-bottom: 20px;
+    }
 }
 
 @media screen and (max-width: 470px) {
@@ -290,7 +388,7 @@ ul.header_menu {
         padding: 0;
     }
 
-    .hidden_big {  //this class need to be renamed
+    .small_screen_menu_button {  
         padding: 0;
     }
 
