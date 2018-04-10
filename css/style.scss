@@ -1,6 +1,7 @@
 $mainFont: "Roboto Slab";
 $secondaryFont: "Montserrat";
 $mainFontColor: rgb(119, 119, 119);
+$buttonsColor: rgb(254, 209, 54);
 $headerBackgroundImage: "../img/header_background_image.png";
 
 
@@ -125,7 +126,16 @@ ul.header_menu {
         font-weight: 700;
         text-transform: uppercase;
         color: white;
-        background-color: rgb(254, 209, 54);
+        background-color: $buttonsColor;
+
+        &:hover {
+            background-color: darken($buttonsColor, 10%);
+        }
+
+        &:active {
+            background-color: darken($buttonsColor, 20%);
+            color: darken(white, 20%);
+        }
     }
 }
 

@@ -124,6 +124,15 @@ ul.header_menu li a:active {
   background-color: #fed136;
 }
 
+.button_wrapper .button:hover {
+  background-color: #fec503;
+}
+
+.button_wrapper .button:active {
+  background-color: #cd9f01;
+  color: #cccccc;
+}
+
 @media screen and (max-width: 1014px) {
   .wrapper {
     width: 98%;
