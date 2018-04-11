@@ -264,7 +264,7 @@ ul.about_list li.about_list_item:after {
 
 ul.about_list li.about_list_item:nth-child(2n) {
   text-align: left;
-  align-self: right;
+  margin-left: 356px;
 }
 
 ul.about_list li.about_list_item:nth-child(2n):after {
@@ -293,7 +293,7 @@ ul.about_list li.about_list_item:last-child div {
 
 ul.about_list li.about_list_item:last-child div p {
   padding: 39px 42px;
-  height: 180px;
+  height: 183px;
   background-image: url("../img/container_round.png");
   background-repeat: no-repeat;
   background-position: center;

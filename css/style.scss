@@ -268,7 +268,8 @@ ul.about_list {
 
     li.about_list_item:nth-child(2n) {
         text-align: left;
-        align-self: right;
+        // align-self: right;
+        margin-left: 356px;   // need to use it because align-self doesn't work in chrome and edge
 
         &:after {
             content: "";
@@ -294,7 +295,7 @@ ul.about_list {
             text-align: center;
             p {
                 padding: 39px 42px;
-                height: 180px;
+                height: 183px;
                 background-image: url("../img/container_round.png");
                 background-repeat: no-repeat;
                 background-position: center;
