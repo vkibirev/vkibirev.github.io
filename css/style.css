@@ -156,14 +156,14 @@ ul.header_menu li a:active {
   font-size: 16px;
 }
 
-ul.services_list, ul.portfolio_list {
+ul.services_list, ul.portfolio_list, ul.about_list {
   padding: 0;
   list-style: none;
   display: flex;
   justify-content: space-between;
 }
 
-ul.services_list b, ul.portfolio_list b {
+ul.services_list b, ul.portfolio_list b, ul.about_list b {
   display: block;
   font-family: "Montserrat", "Arial", sans-serif;
   font-size: 18px;
@@ -171,13 +171,13 @@ ul.services_list b, ul.portfolio_list b {
   line-height: 75px;
 }
 
-ul.services_list p, ul.portfolio_list p {
+ul.services_list p, ul.portfolio_list p, ul.about_list p {
   padding: 0px 10px;
   font-size: 14px;
   font-style: normal;
 }
 
-ul.services_list li.services_list_item, ul.portfolio_list li.services_list_item {
+ul.services_list li.services_list_item, ul.portfolio_list li.services_list_item, ul.about_list li.services_list_item {
   padding-top: 190px;
   text-align: center;
   background-image: url(../img/box.png), url(../img/circle.png);
@@ -185,22 +185,18 @@ ul.services_list li.services_list_item, ul.portfolio_list li.services_list_item 
   background-position: center;
 }
 
-ul.services_list li.services_list_item img, ul.portfolio_list li.services_list_item img {
+ul.services_list li.services_list_item img, ul.portfolio_list li.services_list_item img, ul.about_list li.services_list_item img {
   border: 4px solid #fed136;
   border-radius: 30px;
   padding: 10px;
 }
 
-ul.services_list li.services_list_item:nth-child(2), ul.portfolio_list li.services_list_item:nth-child(2) {
+ul.services_list li.services_list_item:nth-child(2), ul.portfolio_list li.services_list_item:nth-child(2), ul.about_list li.services_list_item:nth-child(2) {
   background-image: url(../img/laptop.png), url(../img/circle.png);
 }
 
-ul.services_list li.services_list_item:nth-child(3), ul.portfolio_list li.services_list_item:nth-child(3) {
+ul.services_list li.services_list_item:nth-child(3), ul.portfolio_list li.services_list_item:nth-child(3), ul.about_list li.services_list_item:nth-child(3) {
   background-image: url(../img/locked.png), url(../img/circle.png);
-}
-
-ul.services_list li.services_list_item:not(:first-child), ul.portfolio_list li.services_list_item:not(:first-child) {
-  padding-left: 20px;
 }
 
 .bg_gray {
@@ -210,6 +206,7 @@ ul.services_list li.services_list_item:not(:first-child), ul.portfolio_list li.s
 ul.portfolio_list {
   border: none;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 ul.portfolio_list b {
@@ -225,6 +222,86 @@ ul.portfolio_list p {
 ul.portfolio_list li.portfolio_list_item {
   margin-top: 50px;
   background-color: white;
+}
+
+ul.about_list {
+  flex-direction: column;
+}
+
+ul.about_list li.about_list_item {
+  position: relative;
+  display: flex;
+  width: 62%;
+  padding-top: 70px;
+  text-align: right;
+  z-index: 100;
+}
+
+ul.about_list li.about_list_item div {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+ul.about_list li.about_list_item b {
+  line-height: 30px;
+}
+
+ul.about_list li.about_list_item p {
+  padding: 15px 0px 0px 0px;
+  line-height: 20px;
+}
+
+ul.about_list li.about_list_item:after {
+  content: "";
+  display: block;
+  width: 3px;
+  background-color: #f1f1f1;
+  height: 75px;
+  position: absolute;
+  top: 252px;
+  right: 111px;
+}
+
+ul.about_list li.about_list_item:nth-child(2n) {
+  text-align: left;
+  align-self: right;
+}
+
+ul.about_list li.about_list_item:nth-child(2n):after {
+  content: "";
+  display: block;
+  width: 3px;
+  background-color: #f1f1f1;
+  height: 75px;
+  position: absolute;
+  top: 252px;
+  left: 111px;
+}
+
+ul.about_list li.about_list_item:last-child {
+  align-self: center;
+  width: 25%;
+}
+
+ul.about_list li.about_list_item:last-child::after {
+  display: none;
+}
+
+ul.about_list li.about_list_item:last-child div {
+  text-align: center;
+}
+
+ul.about_list li.about_list_item:last-child div p {
+  padding: 39px 42px;
+  height: 180px;
+  background-image: url("../img/container_round.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
 }
 
 @media screen and (max-width: 1014px) {
@@ -245,6 +322,33 @@ ul.portfolio_list li.portfolio_list_item {
   }
 }
 
+@media screen and (max-width: 960px) {
+  ul.about_list li.about_list_item {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+  ul.about_list li.about_list_item::after {
+    display: none;
+  }
+  ul.about_list li.about_list_item div:last-of-type {
+    order: -1;
+  }
+  ul.about_list li.about_list_item:nth-child(2n) {
+    width: 100%;
+    text-align: center;
+  }
+  ul.about_list li.about_list_item:nth-child(2n)::after {
+    display: none;
+  }
+  ul.about_list li.about_list_item:nth-child(2n) div:last-of-type {
+    order: 1;
+  }
+  ul.about_list li.about_list_item:last-child {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 892px) {
   .greeting_block {
     padding-top: 120px;
@@ -260,21 +364,24 @@ ul.portfolio_list li.portfolio_list_item {
   .information_block {
     padding: 0;
   }
-  .information_block .services_list, .information_block ul.portfolio_list {
+  .information_block .services_list, .information_block ul.portfolio_list, .information_block ul.about_list {
     flex-direction: column;
   }
   .bg_gray {
     background-color: white;
   }
-  ul.services_list li.services_list_item, ul.portfolio_list li.services_list_item {
+  ul.services_list li.services_list_item, ul.portfolio_list li.services_list_item, ul.about_list li.services_list_item {
     padding-top: 145px;
     padding-left: 0;
   }
-  ul.services_list li.services_list_item b, ul.portfolio_list li.services_list_item b {
+  ul.services_list li.services_list_item b, ul.portfolio_list li.services_list_item b, ul.about_list li.services_list_item b {
     line-height: 20px;
   }
-  ul.services_list li.services_list_item:not(:first-child), ul.portfolio_list li.services_list_item:not(:first-child) {
+  ul.services_list li.services_list_item:not(:first-child), ul.portfolio_list li.services_list_item:not(:first-child), ul.about_list li.services_list_item:not(:first-child) {
     padding-left: 0px;
+  }
+  ul.about_list li.about_list_item {
+    padding-top: 0;
   }
 }
 
