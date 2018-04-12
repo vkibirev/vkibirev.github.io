@@ -153,8 +153,8 @@ ul.header_menu {
 
 .information_block {
     text-align: center;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 80px;
+    padding-bottom: 80px;
     p {        
         font-style: italic;
         color: $mainFontColor;
@@ -268,7 +268,6 @@ ul.about_list {
 
     li.about_list_item:nth-child(2n) {
         text-align: left;
-        // align-self: right;
         margin-left: 356px;   // need to use it because align-self doesn't work in chrome and edge
 
         &:after {
@@ -309,6 +308,145 @@ ul.about_list {
         }
     }
 }
+
+.team_block {
+    padding: 100px 75px;
+}
+
+ul.team_list {
+    @extend .services_list;
+    padding-top: 75px;
+    padding-bottom: 30px;
+    li.team_list_item {
+        
+        b {
+            line-height: 45px;
+        }
+
+        p {
+            padding-bottom: 10px;
+        }
+
+        a {
+            i {
+                width: 40px;
+                height: 40px;
+                padding-top: 7px;
+                color: black;
+                border: 3px solid black;
+                border-radius: 50px;
+                font-size: 22px;
+            }
+        }        
+
+        a {
+
+            i {
+                &:hover {
+                    color: $mainFontColor;
+                    border-color: $mainFontColor;
+                }
+
+                &:active {
+                    color: lighten($mainFontColor, 20);
+                    border-color: lighten($mainFontColor, 20);
+                }
+            }
+            
+        }
+
+        a:not(:first-of-type) {
+            margin-left: 5px;
+        }
+
+        p:nth-last-child() {
+            padding-top: 30px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+}
+
+ul.technologies_list {
+    @extend .services_list;
+}
+
+.contacts {
+
+    background-color: black;
+
+    h3 {
+        color: white;
+    }
+}
+
+.technologies {
+
+    padding: 40px 0px;
+
+    ul.technologies_list {
+        padding: 0 80px;
+    }
+
+}
+
+.contact_form {
+
+    input, textarea {
+        border:0; outline:0;
+        padding: 1em;
+        display: block;
+        width: 100%;
+        margin-top: 1em;
+        resize: none;        
+    }
+
+    input::-webkit-input-placeholder,
+    input::-moz-placeholder, 
+    input::-ms-input-placeholder,
+    input::-moz-placeholder {
+            font-family: $secondaryFont, "Arial", sans-serif;
+            font-weight: bold;
+            font-size: 14px;
+            color: $mainFontColor;
+            text-transform: uppercase;
+        }
+
+    textarea::-webkit-input-placeholder,
+    textarea::-moz-placeholder, 
+    textarea::-ms-input-placeholder,
+    textarea::-moz-placeholder {
+            font-family: $secondaryFont, "Arial", sans-serif;
+            font-weight: bold;
+            font-size: 14px;
+            color: $mainFontColor;
+            text-transform: uppercase;
+        }
+
+    textarea {
+        height: 210px;
+    }
+
+    .half {
+        float: left;
+        width: 48%;        
+    }
+
+    .right {
+        width: 50%;
+    }
+
+    .clearfix:before,
+    .clearfix:after {
+        content: " "; 
+        display: table; 
+    }
+
+    .clearfix:after {
+        clear: both;
+    }
+}
+
 
 @media screen and (max-width: 1014px) {
 
@@ -352,6 +490,7 @@ ul.about_list {
         li.about_list_item:nth-child(2n) {
             width: 100%;
             text-align: center;
+            margin-left: 0;
             
             &::after {
                 display: none;
@@ -364,6 +503,15 @@ ul.about_list {
 
         li.about_list_item:last-child {        
             width: 100%;
+        }
+    }
+
+    .team_block {
+        padding: 0px 75px;
+
+        ul.team_list {
+            padding-top: 0;
+            padding-bottom: 0;
         }
     }
 }
@@ -418,15 +566,19 @@ ul.about_list {
         }
     }
 
-    // li.about_list_item:last-child {
-        
-    //     div {
-    //         text-align: center;
-    //         p {
-    //             top: 27px;
-    //         }
-    //     }
-    // }
+    .technologies {
+
+        padding: 0;
+    
+        ul.technologies_list {
+            padding: 0 80px;
+
+            li.technologies_list_item {
+                margin-top: 15px;
+            }
+        }
+    
+    }
 }
 
 

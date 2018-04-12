@@ -146,8 +146,8 @@ ul.header_menu li a:active {
 
 .information_block {
   text-align: center;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 .information_block p {
@@ -156,14 +156,14 @@ ul.header_menu li a:active {
   font-size: 16px;
 }
 
-ul.services_list, ul.portfolio_list, ul.about_list {
+ul.services_list, ul.portfolio_list, ul.about_list, ul.team_list, ul.technologies_list {
   padding: 0;
   list-style: none;
   display: flex;
   justify-content: space-between;
 }
 
-ul.services_list b, ul.portfolio_list b, ul.about_list b {
+ul.services_list b, ul.portfolio_list b, ul.about_list b, ul.team_list b, ul.technologies_list b {
   display: block;
   font-family: "Montserrat", "Arial", sans-serif;
   font-size: 18px;
@@ -171,13 +171,13 @@ ul.services_list b, ul.portfolio_list b, ul.about_list b {
   line-height: 75px;
 }
 
-ul.services_list p, ul.portfolio_list p, ul.about_list p {
+ul.services_list p, ul.portfolio_list p, ul.about_list p, ul.team_list p, ul.technologies_list p {
   padding: 0px 10px;
   font-size: 14px;
   font-style: normal;
 }
 
-ul.services_list li.services_list_item, ul.portfolio_list li.services_list_item, ul.about_list li.services_list_item {
+ul.services_list li.services_list_item, ul.portfolio_list li.services_list_item, ul.about_list li.services_list_item, ul.team_list li.services_list_item, ul.technologies_list li.services_list_item {
   padding-top: 190px;
   text-align: center;
   background-image: url(../img/box.png), url(../img/circle.png);
@@ -185,17 +185,17 @@ ul.services_list li.services_list_item, ul.portfolio_list li.services_list_item,
   background-position: center;
 }
 
-ul.services_list li.services_list_item img, ul.portfolio_list li.services_list_item img, ul.about_list li.services_list_item img {
+ul.services_list li.services_list_item img, ul.portfolio_list li.services_list_item img, ul.about_list li.services_list_item img, ul.team_list li.services_list_item img, ul.technologies_list li.services_list_item img {
   border: 4px solid #fed136;
   border-radius: 30px;
   padding: 10px;
 }
 
-ul.services_list li.services_list_item:nth-child(2), ul.portfolio_list li.services_list_item:nth-child(2), ul.about_list li.services_list_item:nth-child(2) {
+ul.services_list li.services_list_item:nth-child(2), ul.portfolio_list li.services_list_item:nth-child(2), ul.about_list li.services_list_item:nth-child(2), ul.team_list li.services_list_item:nth-child(2), ul.technologies_list li.services_list_item:nth-child(2) {
   background-image: url(../img/laptop.png), url(../img/circle.png);
 }
 
-ul.services_list li.services_list_item:nth-child(3), ul.portfolio_list li.services_list_item:nth-child(3), ul.about_list li.services_list_item:nth-child(3) {
+ul.services_list li.services_list_item:nth-child(3), ul.portfolio_list li.services_list_item:nth-child(3), ul.about_list li.services_list_item:nth-child(3), ul.team_list li.services_list_item:nth-child(3), ul.technologies_list li.services_list_item:nth-child(3) {
   background-image: url(../img/locked.png), url(../img/circle.png);
 }
 
@@ -304,6 +304,124 @@ ul.about_list li.about_list_item:last-child div p {
   line-height: 28px;
 }
 
+.team_block {
+  padding: 100px 75px;
+}
+
+ul.team_list {
+  padding-top: 75px;
+  padding-bottom: 30px;
+}
+
+ul.team_list li.team_list_item b {
+  line-height: 45px;
+}
+
+ul.team_list li.team_list_item p {
+  padding-bottom: 10px;
+}
+
+ul.team_list li.team_list_item a i {
+  width: 40px;
+  height: 40px;
+  padding-top: 7px;
+  color: black;
+  border: 3px solid black;
+  border-radius: 50px;
+  font-size: 22px;
+}
+
+ul.team_list li.team_list_item a i:hover {
+  color: #777777;
+  border-color: #777777;
+}
+
+ul.team_list li.team_list_item a i:active {
+  color: #aaaaaa;
+  border-color: #aaaaaa;
+}
+
+ul.team_list li.team_list_item a:not(:first-of-type) {
+  margin-left: 5px;
+}
+
+ul.team_list li.team_list_item p:nth-last-child {
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.contacts {
+  background-color: black;
+}
+
+.contacts h3, .contacts .menu_font_style, .contacts .small_screen_menu_button, .contacts ul.header_menu li a, ul.header_menu li .contacts a {
+  color: white;
+}
+
+.technologies {
+  padding: 40px 0px;
+}
+
+.technologies ul.technologies_list {
+  padding: 0 80px;
+}
+
+.contact_form input, .contact_form textarea {
+  border: 0;
+  outline: 0;
+  padding: 1em;
+  display: block;
+  width: 100%;
+  margin-top: 1em;
+  resize: none;
+}
+
+.contact_form input::-webkit-input-placeholder,
+.contact_form input::-moz-placeholder,
+.contact_form input::-ms-input-placeholder,
+.contact_form input::-moz-placeholder {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  color: #777777;
+  text-transform: uppercase;
+}
+
+.contact_form textarea::-webkit-input-placeholder,
+.contact_form textarea::-moz-placeholder,
+.contact_form textarea::-ms-input-placeholder,
+.contact_form textarea::-moz-placeholder {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  color: #777777;
+  text-transform: uppercase;
+}
+
+.contact_form textarea {
+  height: 210px;
+}
+
+.contact_form .half {
+  float: left;
+  width: 48%;
+}
+
+.contact_form .right {
+  width: 50%;
+}
+
+.contact_form .clearfix:before,
+.contact_form .clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.contact_form .clearfix:after {
+  clear: both;
+}
+
 @media screen and (max-width: 1014px) {
   .wrapper {
     width: 98%;
@@ -337,6 +455,7 @@ ul.about_list li.about_list_item:last-child div p {
   ul.about_list li.about_list_item:nth-child(2n) {
     width: 100%;
     text-align: center;
+    margin-left: 0;
   }
   ul.about_list li.about_list_item:nth-child(2n)::after {
     display: none;
@@ -346,6 +465,13 @@ ul.about_list li.about_list_item:last-child div p {
   }
   ul.about_list li.about_list_item:last-child {
     width: 100%;
+  }
+  .team_block {
+    padding: 0px 75px;
+  }
+  .team_block ul.team_list {
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 
@@ -364,24 +490,33 @@ ul.about_list li.about_list_item:last-child div p {
   .information_block {
     padding: 0;
   }
-  .information_block .services_list, .information_block ul.portfolio_list, .information_block ul.about_list {
+  .information_block .services_list, .information_block ul.portfolio_list, .information_block ul.about_list, .information_block ul.team_list, .information_block ul.technologies_list {
     flex-direction: column;
   }
   .bg_gray {
     background-color: white;
   }
-  ul.services_list li.services_list_item, ul.portfolio_list li.services_list_item, ul.about_list li.services_list_item {
+  ul.services_list li.services_list_item, ul.portfolio_list li.services_list_item, ul.about_list li.services_list_item, ul.team_list li.services_list_item, ul.technologies_list li.services_list_item {
     padding-top: 145px;
     padding-left: 0;
   }
-  ul.services_list li.services_list_item b, ul.portfolio_list li.services_list_item b, ul.about_list li.services_list_item b {
+  ul.services_list li.services_list_item b, ul.portfolio_list li.services_list_item b, ul.about_list li.services_list_item b, ul.team_list li.services_list_item b, ul.technologies_list li.services_list_item b {
     line-height: 20px;
   }
-  ul.services_list li.services_list_item:not(:first-child), ul.portfolio_list li.services_list_item:not(:first-child), ul.about_list li.services_list_item:not(:first-child) {
+  ul.services_list li.services_list_item:not(:first-child), ul.portfolio_list li.services_list_item:not(:first-child), ul.about_list li.services_list_item:not(:first-child), ul.team_list li.services_list_item:not(:first-child), ul.technologies_list li.services_list_item:not(:first-child) {
     padding-left: 0px;
   }
   ul.about_list li.about_list_item {
     padding-top: 0;
+  }
+  .technologies {
+    padding: 0;
+  }
+  .technologies ul.technologies_list {
+    padding: 0 80px;
+  }
+  .technologies ul.technologies_list li.technologies_list_item {
+    margin-top: 15px;
   }
 }
 
